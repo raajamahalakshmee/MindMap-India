@@ -1,0 +1,203 @@
+:root {
+    --coffee-dark: #2B2118;
+    --coffee-medium: #4B3621;
+    --coffee-light: #A67B5B;
+    --coffee-lighter: #D4A76A;
+    --coffee-cream: #F5F5DC;
+    --black: #121212;
+    --dark-gray: #1E1E1E;
+    --medium-gray: #2D2D2D;
+    --light-gray: #E0E0E0;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--black);
+    color: var(--coffee-cream);
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--coffee-lighter);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, var(--coffee-light), var(--coffee-lighter));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+h2 {
+    color: var(--coffee-light);
+    border-bottom: 2px solid var(--coffee-medium);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Buttons */
+button, .stButton>button {
+    background-color: var(--coffee-medium);
+    color: var(--coffee-cream) !important;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover, .stButton>button:hover {
+    background-color: var(--coffee-light) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: var(--black) !important;
+}
+
+button:active, .stButton>button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards and Containers */
+.stApp {
+    background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+}
+
+.stApp > div > div > div > div > div > section > div > div > div {
+    background-color: rgba(30, 30, 30, 0.8) !important;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--coffee-medium);
+    transition: all 0.3s ease;
+}
+
+.stApp > div > div > div > div > div > section > div > div > div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-left-color: var(--coffee-light);
+}
+
+/* Sidebar */
+.css-1d391kg, .css-1d391kg > div:first-child {
+    background-color: var(--dark-gray) !important;
+    border-right: 1px solid var(--coffee-medium);
+}
+
+/* Input Fields */
+.stTextInput > div > div > input,
+.stSelectbox > div > div > div,
+.stTextArea > div > div > textarea {
+    background-color: var(--dark-gray) !important;
+    color: var(--coffee-cream) !important;
+    border: 1px solid var(--coffee-medium) !important;
+    border-radius: 4px !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stSelectbox > div > div > div:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: var(--coffee-light) !important;
+    box-shadow: 0 0 0 2px rgba(166, 123, 91, 0.3) !important;
+}
+
+/* Expanders */
+.stExpander {
+    background-color: rgba(30, 30, 30, 0.8) !important;
+    border: 1px solid var(--coffee-medium) !important;
+    border-radius: 6px !important;
+    margin: 0.5rem 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.stExpander:hover {
+    border-color: var(--coffee-light) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+    background-color: var(--dark-gray);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--coffee-medium);
+}
+
+th {
+    background-color: var(--coffee-medium);
+    color: var(--coffee-cream);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background-color: rgba(166, 123, 91, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--coffee-medium);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--coffee-light);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stApp > div > div > div > div > div > section > div > div > div {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .stApp > div > div > div > div > div > section > div > div > div {
+        padding: 1rem;
+    }
+}
